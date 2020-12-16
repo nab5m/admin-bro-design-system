@@ -6,6 +6,7 @@
 import React, { useState, useEffect, useRef, useMemo, useCallback, forwardRef } from 'react'
 
 import styled from 'styled-components'
+import { ImageResize } from 'quill-image-resize-module';
 import snow from './snow.styles'
 import bubble from './bubble.styles'
 import styles from './styles'
@@ -73,6 +74,8 @@ export const RichText = forwardRef<HTMLDivElement, RichTextProps>((props, ref) =
 
   useEffect(() => {
     if (editorRef.current) {
+      Quill.register('modules/imageResize', ImageResize);
+
       const quillInstance = new Quill(editorRef.current, options)
       setQuill(quillInstance)
     }

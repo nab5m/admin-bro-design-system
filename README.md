@@ -1,5 +1,7 @@
 # @admin-bro/design-system
 
+Tirrilee adds Image resize module for RichText field
+
 This package consists of all DesignSystem components from [AdminBro](adminbro.com) so you can use all of them outside the `admin-bro` core.
 
 It was created with the help of 2 amazing packages:
